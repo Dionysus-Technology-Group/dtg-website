@@ -117,7 +117,8 @@ function getScriptSize(scriptPath) {
  * Reads options from `package.json`
  */
 function getOptions(pathPrefix = process.cwd()) {
-  const pkg = require(path.join(pathPrefix, "package.json"))
+  console.log("pathPrefix:", pathPrefix)
+  const pkg = require("package.json")
 
   return { ...pkg.nextBundleAnalysis, name: pkg.name }
 }
